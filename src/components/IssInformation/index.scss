@@ -1,0 +1,111 @@
+.iss-info {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+
+  &__left {
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  &__locate {
+    border: 1px solid #000000;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    h2 {
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 17px;
+    }
+
+    p {
+      font-style: oblique;
+    }
+
+  }
+
+  &__map {
+    height: 90%;
+  }
+
+  &__right {
+    width: 400px;
+    height: 90%;
+  }
+
+  &__date {
+    border: 1px solid #000000;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    p {
+      &:first-child {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      &:last-child {
+        font-style: oblique;
+      }
+    }
+  }
+
+  &__people{
+    border: 1px solid #000000;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list-of-people {
+    border-bottom: 1px solid #000000;
+    flex: 1 1 100%;
+    padding: 10px;
+    overflow-y: scroll;
+  }
+
+  &__list-item {
+    border: 1px solid #000000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__amount-of-people {
+    padding: 10px;
+  }
+}
+
+.loading {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    font-weight: bold;
+    font-size: 29px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .iss-info {
+    flex-direction: column;
+
+    &__map {
+      margin-bottom: 10px;
+      height: 80vh;
+    }
+
+    &__right {
+      width: 100%;
+    }
+  }
+}
